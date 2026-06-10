@@ -185,7 +185,8 @@
 
     .tabela-noiteiros {
       width: 100%;
-      border-collapse: collapse;
+      border-collapse: separate;
+      border-spacing: 0 8px;
       margin-top: 8px;
       overflow: hidden;
       border-radius: 12px;
@@ -228,6 +229,17 @@
       border-top: 2px solid var(--amarelo);
       border-bottom: 2px solid var(--amarelo);
       font-weight: bold;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.10);
+    }
+
+    .tabela-noiteiros tr.dia-atual td:first-child {
+      border-left: 2px solid var(--amarelo);
+      border-radius: 14px 0 0 14px;
+    }
+
+    .tabela-noiteiros tr.dia-atual td:last-child {
+      border-right: 2px solid var(--amarelo);
+      border-radius: 0 14px 14px 0;
     }
 
     .tabela-noiteiros tr.dia-passado td {
@@ -237,7 +249,6 @@
 
     .tabela-noiteiros tr.proximo-dia td {
       background: #f4f7fb;
-      border-left: 4px solid var(--azul);
     }
 
     .badge {
@@ -305,16 +316,16 @@
         </thead>
         <tbody>
           <tr data-data="2026-06-19"><td>Sexta-feira<br>19/06</td><td>Missa de abertura</td><td>Pe. Marcílio</td></tr>
-          <tr data-data="2026-06-20"><td>Sábado<br>20/06</td><td>1ª Noite de novena</td><td>A definir</td></tr>
+          <tr data-data="2026-06-20"><td>Sábado<br>20/06</td><td>1ª Noite de novena</td><td>Walef</td></tr>
           <tr data-data="2026-06-21"><td>Domingo<br>21/06</td><td>2ª Noite de novena</td><td>Diácono Luiz Paiva</td></tr>
           <tr data-data="2026-06-22"><td>Segunda-feira<br>22/06</td><td>3ª Noite de novena</td><td>Padre Chagas Costa</td></tr>
           <tr data-data="2026-06-23"><td>Terça-feira<br>23/06</td><td>4ª Noite de novena</td><td>Padre Diogo</td></tr>
           <tr data-data="2026-06-24"><td>Quarta-feira<br>24/06</td><td>5ª Noite de novena</td><td>Jaime Câmara</td></tr>
           <tr data-data="2026-06-25"><td>Quinta-feira<br>25/06</td><td>6ª Noite de novena</td><td>Irmãs da Purificação</td></tr>
-          <tr data-data="2026-06-26"><td>Sexta-feira<br>26/06</td><td>7ª Noite de novena</td><td>A definir</td></tr>
+          <tr data-data="2026-06-26"><td>Sexta-feira<br>26/06</td><td>7ª Noite de novena</td><td>Cortez</td></tr>
           <tr data-data="2026-06-27"><td>Sábado<br>27/06</td><td>8ª Noite de novena <span class="badge">Leilão</span></td><td>Ministro Lázaro Pinto</td></tr>
-          <tr data-data="2026-06-28"><td>Domingo<br>28/06</td><td>9ª Noite de novena</td><td>Diácono Jorge</td></tr>
-          <tr data-data="2026-06-29"><td>Segunda-feira<br>29/06</td><td>Missa de encerramento</td><td>Pe. Pedro</td></tr>
+          <tr data-data="2026-06-28"><td>Domingo<br>28/06</td><td>9ª Noite de novena <span class="badge">Batizados</span></td><td>Diácono Jorge</td></tr>
+          <tr data-data="2026-06-29"><td>Segunda-feira<br>29/06</td><td>Procissão e Missa de encerramento</td><td>Pe. Pedro</td></tr>
         </tbody>
       </table>
     </section>
@@ -324,16 +335,13 @@
       <div class="aviso">
         Clique em <strong>Cadastrar Prenda</strong>, informe o nome da prenda, doador(a), endereço, valor, telefone e quem fez o cadastro.
       </div>
-      <p class="pequeno">
-        Depois do cadastro, a equipe poderá conferir tudo na lista de prendas e organizar a impressão das etiquetas antes do leilão.
-      </p>
     </section>
 
   </main>
 
   <footer>
     Festa de São Pedro 2026 — Córrego<br>
-    Aplicativo simples da Festa de São Pedro — versão 5.
+    Versão 6.
   </footer>
 
   <script>
