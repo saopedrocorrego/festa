@@ -161,7 +161,7 @@
       border-radius: 12px;
       padding: 10px 12px;
       color: var(--azul2);
-      font-weight: bold;
+      font-weight: normal;
       line-height: 1.35;
     }
 
@@ -309,15 +309,83 @@
       font-weight: bold;
     }
 
+
+    .programacao-lista {
+      display: grid;
+      gap: 12px;
+      margin-top: 12px;
+    }
+
+    .programacao-card {
+      background: #fff;
+      border: 1px solid #e7dfcf;
+      border-radius: 16px;
+      padding: 14px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.06);
+      line-height: 1.4;
+    }
+
+    .programacao-data {
+      color: var(--azul2);
+      font-weight: bold;
+      font-size: 1.05rem;
+      margin-bottom: 4px;
+    }
+
+    .programacao-titulo {
+      font-weight: bold;
+      font-size: 1.02rem;
+      margin-bottom: 6px;
+    }
+
+    .programacao-celebrante {
+      margin-bottom: 6px;
+    }
+
+    .programacao-card.dia-atual {
+      background: #fff8e7;
+      border: 2px solid var(--amarelo);
+      box-shadow: 0 4px 14px rgba(0,0,0,0.10);
+    }
+
+    .programacao-card.dia-passado {
+      opacity: 0.82;
+      background: #fafafa;
+    }
+
+    .programacao-card.proximo-dia {
+      background: #f4f7fb;
+      border-color: #d8e2f0;
+    }
+
     @media (max-width: 650px) {
-      .tabela-noiteiros th,
-      .tabela-noiteiros td {
-        font-size: 0.88rem;
-        padding: 9px 6px;
+      .programacao-destaque {
+        padding: 14px;
+      }
+
+      .programacao-card {
+        padding: 13px;
+      }
+
+      .programacao-data {
+        font-size: 1rem;
+      }
+
+      .programacao-titulo {
+        font-size: 1rem;
       }
 
       .programacao-detalhes {
-        font-size: 0.84rem;
+        font-size: 0.9rem;
+      }
+
+      .programacao-detalhes div {
+        margin: 5px 0;
+      }
+
+      .badge {
+        margin-left: 6px;
+        margin-top: 4px;
       }
     }
 
@@ -349,123 +417,92 @@
       <div id="programacaoSelecionada" class="programacao-destaque">
         A programação do dia será destacada automaticamente conforme a data do aparelho.
       </div>
-
-      <table class="tabela-noiteiros">
-        <thead>
-          <tr>
-            <th>Data</th>
-            <th>Programação</th>
-            <th>Celebrante</th>
-            <th>Detalhes</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr data-data="2026-06-19">
-            <td>Sexta-feira<br>19/06</td>
-            <td>Missa de abertura</td>
-            <td>Pe. Marcílio</td>
-            <td class="programacao-detalhes">Horário: 19h</td>
-          </tr>
-          <tr data-data="2026-06-20">
-            <td>Sábado<br>20/06</td>
-            <td>1ª Noite de novena</td>
-            <td>Lázaro Pinto</td>
-            <td class="programacao-detalhes">
-              <div><strong>Ilum. bíblica:</strong> Permanecer com Ele: deixar-se formar na intimidade com Jesus (Jo 1,35-42)</div>
-              <div><strong>Com. convidadas:</strong> Trapiá e Baixa Fechada</div>
-            </td>
-          </tr>
-          <tr data-data="2026-06-21">
-            <td>Domingo<br>21/06</td>
-            <td>2ª Noite de novena</td>
-            <td>Diácono Luiz Paiva</td>
-            <td class="programacao-detalhes">
-              <div><strong>Ilum. bíblica:</strong> Caminhar com Jesus e aprender com Ele a ser discípulos missionários do Reino (Mc 1,16-20)</div>
-              <div><strong>Com. convidadas:</strong> Sítio Floresta, Aurora da Serra e Boa Vista</div>
-            </td>
-          </tr>
-          <tr data-data="2026-06-22">
-            <td>Segunda-feira<br>22/06</td>
-            <td>Missa e 3ª Noite de novena</td>
-            <td>Pe. Chagas</td>
-            <td class="programacao-detalhes">
-              <div><strong>Ilum. bíblica:</strong> Deixar-se transformar pela humildade e pela misericórdia de Jesus (Mt 7,1-5)</div>
+      <div class="programacao-lista">
+          <article class="programacao-card" data-data="2026-06-19">
+            <div class="programacao-data">Sexta-feira – 19/06</div>
+            <div class="programacao-titulo">Missa de abertura</div>
+            <div class="programacao-celebrante"><strong>Celebrante:</strong> Pe. Marcílio</div>
+            <div class="programacao-detalhes">Horário: 19h</div>
+          </article>
+          <article class="programacao-card" data-data="2026-06-20">
+            <div class="programacao-data">Sábado – 20/06</div>
+            <div class="programacao-titulo">1ª Noite de novena</div>
+            <div class="programacao-celebrante"><strong>Celebrante:</strong> Lázaro Pinto</div>
+            <div class="programacao-detalhes"><div><strong>Ilum. bíblica:</strong> Permanecer com Ele: deixar-se formar na intimidade com Jesus (Jo 1,35-42)</div>
+              <div><strong>Com. convidadas:</strong> Trapiá e Baixa Fechada</div></div>
+          </article>
+          <article class="programacao-card" data-data="2026-06-21">
+            <div class="programacao-data">Domingo – 21/06</div>
+            <div class="programacao-titulo">2ª Noite de novena</div>
+            <div class="programacao-celebrante"><strong>Celebrante:</strong> Diácono Luiz Paiva</div>
+            <div class="programacao-detalhes"><div><strong>Ilum. bíblica:</strong> Caminhar com Jesus e aprender com Ele a ser discípulos missionários do Reino (Mc 1,16-20)</div>
+              <div><strong>Com. convidadas:</strong> Sítio Floresta, Aurora da Serra e Boa Vista</div></div>
+          </article>
+          <article class="programacao-card" data-data="2026-06-22">
+            <div class="programacao-data">Segunda-feira – 22/06</div>
+            <div class="programacao-titulo">Missa e 3ª Noite de novena</div>
+            <div class="programacao-celebrante"><strong>Celebrante:</strong> Pe. Chagas</div>
+            <div class="programacao-detalhes"><div><strong>Ilum. bíblica:</strong> Deixar-se transformar pela humildade e pela misericórdia de Jesus (Mt 7,1-5)</div>
               <div><strong>Grupo:</strong> Círculos do ECC dos casais da comunidade</div>
-              <div><strong>Com. convidadas:</strong> Juazeiro da Divisa, Sítio São Francisco e Portal da Chapada</div>
-            </td>
-          </tr>
-          <tr data-data="2026-06-23">
-            <td>Terça-feira<br>23/06</td>
-            <td>4ª Noite de novena</td>
-            <td>Padre Diogo</td>
-            <td class="programacao-detalhes">
-              <div><strong>Ilum. bíblica:</strong> Acolher o convite de Jesus para viver o amor que conduz ao Reino (Mt 7,6.12-14)</div>
-              <div><strong>Com. convidadas:</strong> Distrito de Melancias e Bico Torto</div>
-            </td>
-          </tr>
-          <tr data-data="2026-06-24">
-            <td>Quarta-feira<br>24/06</td>
-            <td>5ª Noite de novena</td>
-            <td>Jaime Câmara</td>
-            <td class="programacao-detalhes">
-              <div><strong>Ilum. bíblica:</strong> Ativar a consciência do chamado à comunhão com o Senhor como fonte do testemunho (Mc 3,13-19)</div>
-              <div><strong>Com. convidadas:</strong> Sítio Barra, Sítio Ponta II e Distrito de Córrego</div>
-            </td>
-          </tr>
-          <tr data-data="2026-06-25">
-            <td>Quinta-feira<br>25/06</td>
-            <td>6ª Noite de novena</td>
-            <td>Irmãs da Purificação</td>
-            <td class="programacao-detalhes">
-              <div><strong>Ilum. bíblica:</strong> Trilhar o caminho do discipulado na escuta que se faz oração e seguimento (Mc 10,46-52)</div>
-              <div><strong>Com. convidadas:</strong> Distrito de Soledade e Nova Descoberta</div>
-            </td>
-          </tr>
-          <tr data-data="2026-06-26">
-            <td>Sexta-feira<br>26/06</td>
-            <td>7ª Noite de novena</td>
-            <td>Cortez</td>
-            <td class="programacao-detalhes">
-              <div><strong>Ilum. bíblica:</strong> Viver o amor que se faz serviço humilde aos irmãos (Jo 13,1-15)</div>
-              <div><strong>Com. convidadas:</strong> Bairro Lagoa Seca e Sítio Estreito</div>
-            </td>
-          </tr>
-          <tr data-data="2026-06-27">
-            <td>Sábado<br>27/06</td>
-            <td>8ª Noite de novena <span class="badge">Leilão</span></td>
-            <td>Walef</td>
-            <td class="programacao-detalhes">
-              <div><strong>Ilum. bíblica:</strong> Caminhar com o Senhor que transforma a noite em esperança (Jo 14,1-6)</div>
+              <div><strong>Com. convidadas:</strong> Juazeiro da Divisa, Sítio São Francisco e Portal da Chapada</div></div>
+          </article>
+          <article class="programacao-card" data-data="2026-06-23">
+            <div class="programacao-data">Terça-feira – 23/06</div>
+            <div class="programacao-titulo">4ª Noite de novena</div>
+            <div class="programacao-celebrante"><strong>Celebrante:</strong> Padre Diogo</div>
+            <div class="programacao-detalhes"><div><strong>Ilum. bíblica:</strong> Acolher o convite de Jesus para viver o amor que conduz ao Reino (Mt 7,6.12-14)</div>
+              <div><strong>Com. convidadas:</strong> Distrito de Melancias e Bico Torto</div></div>
+          </article>
+          <article class="programacao-card" data-data="2026-06-24">
+            <div class="programacao-data">Quarta-feira – 24/06</div>
+            <div class="programacao-titulo">5ª Noite de novena</div>
+            <div class="programacao-celebrante"><strong>Celebrante:</strong> Jaime Câmara</div>
+            <div class="programacao-detalhes"><div><strong>Ilum. bíblica:</strong> Ativar a consciência do chamado à comunhão com o Senhor como fonte do testemunho (Mc 3,13-19)</div>
+              <div><strong>Com. convidadas:</strong> Sítio Barra, Sítio Ponta II e Distrito de Córrego</div></div>
+          </article>
+          <article class="programacao-card" data-data="2026-06-25">
+            <div class="programacao-data">Quinta-feira – 25/06</div>
+            <div class="programacao-titulo">6ª Noite de novena</div>
+            <div class="programacao-celebrante"><strong>Celebrante:</strong> Irmãs da Purificação</div>
+            <div class="programacao-detalhes"><div><strong>Ilum. bíblica:</strong> Trilhar o caminho do discipulado na escuta que se faz oração e seguimento (Mc 10,46-52)</div>
+              <div><strong>Com. convidadas:</strong> Distrito de Soledade e Nova Descoberta</div></div>
+          </article>
+          <article class="programacao-card" data-data="2026-06-26">
+            <div class="programacao-data">Sexta-feira – 26/06</div>
+            <div class="programacao-titulo">7ª Noite de novena</div>
+            <div class="programacao-celebrante"><strong>Celebrante:</strong> Cortez</div>
+            <div class="programacao-detalhes"><div><strong>Ilum. bíblica:</strong> Viver o amor que se faz serviço humilde aos irmãos (Jo 13,1-15)</div>
+              <div><strong>Com. convidadas:</strong> Bairro Lagoa Seca e Sítio Estreito</div></div>
+          </article>
+          <article class="programacao-card" data-data="2026-06-27">
+            <div class="programacao-data">Sábado – 27/06</div>
+            <div class="programacao-titulo">8ª Noite de novena</div>
+            <div class="programacao-celebrante"><strong>Celebrante:</strong> Walef</div>
+            <div class="programacao-detalhes"><div><strong>Ilum. bíblica:</strong> Caminhar com o Senhor que transforma a noite em esperança (Jo 14,1-6)</div>
               <div><strong>Com. convidadas:</strong> IPE e Bacural I</div>
-              <div class="programacao-extra">Tradicional leilão após a novena</div>
-            </td>
-          </tr>
-          <tr data-data="2026-06-28">
-            <td>Domingo<br>28/06</td>
-            <td>Programação da manhã e 9ª Noite de novena <span class="badge">Batizados</span></td>
-            <td>Pe. Pedro Vítor / Diác. Jorge</td>
-            <td class="programacao-detalhes">
-              <div><strong>Manhã:</strong></div>
+              <div class="programacao-extra">Tradicional leilão </div></div>
+          </article>
+          <article class="programacao-card" data-data="2026-06-28">
+            <div class="programacao-data">Domingo – 28/06</div>
+            <div class="programacao-titulo">Programação da manhã e 9ª Noite de novena</div>
+            
+            <div class="programacao-detalhes"><div><strong>Manhã:</strong></div>
               <div><strong>5h30min:</strong> Treino coletivo dos corredores da areia</div>
               <div><strong>10h:</strong> Batizados com Pe. Pedro Vítor, na Capela de São Pedro</div>
               <div><strong>Noite:</strong></div>
               <div><strong>19h:</strong> 9ª Noite de novena, com Diác. Jorge</div>
               <div><strong>Ilum. bíblica:</strong> Chamados pelo amor: a vocação nasce do encontro com Cristo que ama e chama (Jo 15,9-17)</div>
               <div><strong>Grupo:</strong> Ministros da Eucaristia</div>
-              <div><strong>Com. convidadas:</strong> Bairro Portal da Chapada e Sítio Santa Rosa II</div>
-            </td>
-          </tr>
-          <tr data-data="2026-06-29">
-            <td>Segunda-feira<br>29/06</td>
-            <td>Procissão e Missa de encerramento</td>
-            <td>Pe. Pedro Vítor</td>
-            <td class="programacao-detalhes">
-              <div><strong>18h:</strong> Procissão de São Pedro saindo da casa de Edinha</div>
-              <div><strong>19h:</strong> Missa de encerramento</div>
-            </td>
-          </tr>
-        </tbody>
-      </table>
+              <div><strong>Com. convidadas:</strong> Bairro Portal da Chapada e Sítio Santa Rosa II</div></div>
+          </article>
+          <article class="programacao-card" data-data="2026-06-29">
+            <div class="programacao-data">Segunda-feira – 29/06</div>
+            <div class="programacao-titulo">Procissão e Missa de encerramento</div>
+            <div class="programacao-celebrante"><strong>Celebrante:</strong> Pe. Pedro Vítor</div>
+            <div class="programacao-detalhes"><div><strong>18h:</strong> Procissão de São Pedro saindo da casa de Edinha</div>
+              <div><strong>19h:</strong> Missa de encerramento</div></div>
+          </article>
+      </div>
     </section>
 
     <section class="card">
@@ -499,12 +536,10 @@
 
   <footer>
     Festa de São Pedro 2026 — Córrego<br>
-    Versão 11 — programação atualizada.
+    Versão 15.
   </footer>
 
   <script>
-
-
     function obterDataAtualDoAparelho() {
       const parametros = new URLSearchParams(window.location.search);
       const dataTeste = parametros.get('data');
@@ -521,7 +556,7 @@
 
     function destacarProgramacaoDoDia() {
       const hojeTexto = obterDataAtualDoAparelho();
-      const linhas = Array.from(document.querySelectorAll('.tabela-noiteiros tbody tr'));
+      const linhas = Array.from(document.querySelectorAll('.programacao-card'));
       const destaque = document.getElementById('programacaoSelecionada');
       let linhaHoje = null;
       let proximaLinha = null;
@@ -541,21 +576,23 @@
       });
 
       if (linhaHoje) {
-        const data = linhaHoje.children[0].innerHTML.replace('<br>', ' — ');
-        const programacao = linhaHoje.children[1].innerHTML;
-        const celebrante = linhaHoje.children[2].innerHTML;
-        const detalhes = linhaHoje.children[3] ? linhaHoje.children[3].innerHTML : '';
-        destaque.innerHTML = `<strong>Programação de hoje</strong><br>${data}<br>${programacao}<br><strong>Celebrante:</strong> ${celebrante}<br>${detalhes}`;
+        const data = linhaHoje.querySelector('.programacao-data').innerHTML;
+        const programacao = linhaHoje.querySelector('.programacao-titulo').innerHTML;
+        const celebranteEl = linhaHoje.querySelector('.programacao-celebrante');
+        const celebrante = celebranteEl ? celebranteEl.innerHTML + '<br>' : '';
+        const detalhes = linhaHoje.querySelector('.programacao-detalhes') ? linhaHoje.querySelector('.programacao-detalhes').innerHTML : '';
+        destaque.innerHTML = `<strong>Programação de hoje</strong><br>${data}<br>${programacao}<br>${celebrante}${detalhes}`;
         return;
       }
 
       if (proximaLinha) {
         proximaLinha.classList.add('proximo-dia');
-        const data = proximaLinha.children[0].innerHTML.replace('<br>', ' — ');
-        const programacao = proximaLinha.children[1].innerHTML;
-        const celebrante = proximaLinha.children[2].innerHTML;
-        const detalhes = proximaLinha.children[3] ? proximaLinha.children[3].innerHTML : '';
-        destaque.innerHTML = `<strong>A festa ainda não iniciou.</strong><br>Próxima programação: ${data}<br>${programacao}<br><strong>Celebrante:</strong> ${celebrante}<br>${detalhes}`;
+        const data = proximaLinha.querySelector('.programacao-data').innerHTML;
+        const programacao = proximaLinha.querySelector('.programacao-titulo').innerHTML;
+        const celebranteEl = proximaLinha.querySelector('.programacao-celebrante');
+        const celebrante = celebranteEl ? celebranteEl.innerHTML + '<br>' : '';
+        const detalhes = proximaLinha.querySelector('.programacao-detalhes') ? proximaLinha.querySelector('.programacao-detalhes').innerHTML : '';
+        destaque.innerHTML = `<strong>A festa ainda não iniciou.</strong><br>Próxima programação: ${data}<br>${programacao}<br>${celebrante}${detalhes}`;
         return;
       }
 
