@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Equipe de Prendas - Festa de São Pedro 2026</title>
+  <style>
+    :root {
+      --azul: #0f4c81;
+      --azul2: #12395c;
+      --amarelo: #f5b942;
+      --fundo: #f7f3ea;
+      --texto: #222;
+      --branco: #fff;
+      --verde: #128c7e;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: var(--fundo);
+      color: var(--texto);
+    }
+
+    header {
+      background: linear-gradient(135deg, var(--azul), var(--azul2));
+      color: white;
+      text-align: center;
+      padding: 28px 16px 24px;
+      border-bottom: 6px solid var(--amarelo);
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 1.8rem;
+      letter-spacing: 0.4px;
+    }
+
+    header p {
+      margin: 8px 0 0;
+      font-size: 1.02rem;
+      opacity: 0.96;
+      line-height: 1.35;
+    }
+
+    main {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 18px 14px 12px;
+    }
+
+    .card {
+      background: var(--branco);
+      border-radius: 16px;
+      padding: 18px;
+      margin: 14px 0;
+      box-shadow: 0 3px 12px rgba(0,0,0,0.10);
+      border: 1px solid rgba(0,0,0,0.05);
+    }
+
+    .card h2 {
+      margin: 0 0 8px;
+      font-size: 1.3rem;
+      color: var(--azul2);
+      text-align: center;
+    }
+
+    .orientacao {
+      text-align: center;
+      color: #555;
+      font-size: 0.96rem;
+      line-height: 1.4;
+      margin: 0 0 14px;
+    }
+
+    .botoes {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 12px;
+      margin-top: 10px;
+    }
+
+    a.botao {
+      display: block;
+      width: 100%;
+      text-align: center;
+      text-decoration: none;
+      border-radius: 14px;
+      padding: 17px 12px;
+      font-size: 1.08rem;
+      font-weight: bold;
+      background: var(--azul);
+      color: white;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+    }
+
+    a.botao:hover {
+      filter: brightness(0.96);
+    }
+
+    .botao.verde {
+      background: var(--verde);
+    }
+
+    .botao.amarelo {
+      background: var(--amarelo);
+      color: #2b230f;
+    }
+
+    .rodape {
+      text-align: center;
+      color: #666;
+      font-size: 0.9rem;
+      padding: 4px 16px 16px;
+      line-height: 1.35;
+    }
+
+    @media (max-width: 480px) {
+      header h1 {
+        font-size: 1.55rem;
+      }
+
+      header p {
+        font-size: 0.96rem;
+      }
+
+      .card {
+        padding: 16px;
+      }
+
+      a.botao {
+        font-size: 1rem;
+        padding: 16px 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Festa de São Pedro 2026</h1>
+    <p>Equipe de Prendas do Leilão<br>19 a 29 de junho de 2026 — Distrito de Córrego, Apodi-RN</p>
+  </header>
+
+  <main>
+    <section class="card">
+      <h2>Cadastro de Prendas</h2>
+      <p class="orientacao">
+        Página interna para cadastrar e conferir as prendas do leilão.
+      </p>
+
+      <div class="botoes">
+        <a class="botao verde" href="https://docs.google.com/forms/d/e/1FAIpQLSewlLI5dEtXeX7U1UVgOjp9TX0cMhkGOyVCLtLoYBg2OXQTCA/viewform" target="_blank">
+          Cadastro de prendas
+        </a>
+
+        <a class="botao amarelo" href="https://docs.google.com/spreadsheets/d/e/2PACX-1vRwlzHfeA2HfJJQfQKhYL6M92REyDShvz85e01voGkjEuWfUqBbkhB8qjBaAiLEbTmu93xB2wcljcOi/pubhtml?gid=1188896680&single=true" target="_blank">
+          Ver prendas por número
+        </a>
+
+        <a class="botao" href="https://docs.google.com/spreadsheets/d/e/2PACX-1vRwlzHfeA2HfJJQfQKhYL6M92REyDShvz85e01voGkjEuWfUqBbkhB8qjBaAiLEbTmu93xB2wcljcOi/pubhtml?gid=1373569897&single=true" target="_blank">
+          Ver prendas por endereço
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <div class="rodape">
+    Festa de São Pedro 2026 — Córrego<br>
+    Página interna da equipe de prendas.
+  </div>
+</body>
+</html>
